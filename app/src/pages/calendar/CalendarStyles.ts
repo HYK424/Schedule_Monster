@@ -138,6 +138,7 @@ export const Container = styled.div`
 
 export const CalendarController = styled.div`
   display: flex;
+  /* flex-wrap: wrap; */
   justify-content: space-between;
   align-items: center;
   height: 40px;

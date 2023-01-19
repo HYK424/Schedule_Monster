@@ -2,9 +2,7 @@ import {
   faCaretLeft,
   faRotateRight,
   faCaretRight,
-  faClipboardQuestion,
   faFileCircleQuestion,
-  faPersonCircleQuestion,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { format } from 'date-fns';
@@ -12,7 +10,6 @@ import { Controller } from 'types/calendarTypes';
 import { CalendarController } from './CalendarStyles';
 import React from 'react';
 import { CalendarList } from 'components/calendar/CalendarList';
-import { Delete } from 'components/calendar/Delete';
 import { Share } from 'components/calendar/Share';
 import { useDispatch } from 'react-redux';
 import { toggleHow } from './slice/modalSlice';
@@ -23,7 +20,7 @@ const DateController = ({ date, onClick }: Controller) => {
   return (
     <CalendarController>
       <CalendarList />
-      <div style={{ marginRight: '90px' }}>
+      <div style={{marginRight: '90px'}}>
         <FontAwesomeIcon onClick={onClick.prev} icon={faCaretLeft} />
         {/* <FontAwesomeIcon onClick={onClick.up} icon={faCaretUp} /> */}
         <h3>{format(date, 'yyyy')}</h3>
