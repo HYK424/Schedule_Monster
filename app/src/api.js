@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const cloudDB = process.env.REACT_APP_CLOUD_DB;
+const cloudDB = 'http://localhost:5000';
 
 async function get(endpoint) {
   const apiUrl = `${cloudDB}/api${endpoint}`;
